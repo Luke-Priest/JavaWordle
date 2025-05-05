@@ -24,7 +24,7 @@ public class Attempt {
     protected Attempt(String word, boolean[] corrects, boolean[] almosts) {
         this.word = word;
         this.corrects = corrects;
-        this.almosts = almosts;
+        this.almosts = almosts; // fart farm
     }
 
     /**
