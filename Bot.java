@@ -27,7 +27,8 @@ public interface Bot {
         // Bot player = new DuhBot();
         // Bot player = new DizzyBot();
         // Bot player = new DingBot();
-        Bot player = new CoolerBot();
+        Bot player = new AveryBot();
+        // Bot player = new CoolerBot();
 
         // have bot attempt until solving the wordle
         do {
