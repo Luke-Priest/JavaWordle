@@ -19,9 +19,8 @@ public class CoolerBot implements Bot {
     * @return the next word in the solution dictionary
     */
 
-    String filename = "la-dictionary.txt"; // Ensure this file exists
     try {
-        List<String> wordsList = Files.readAllLines(Paths.get(filename)); // Read all lines
+        List<String> wordsList = Files.readAllLines(Paths.get("la-dictionary.txt"));
         words = wordsList.toArray(new String[0]);
     } catch (IOException e) {
         System.err.println("Error reading the file: " + e.getMessage());
