@@ -9,7 +9,9 @@ public class CoolerBot implements Bot {
     String[] wrong;
     String[] right;
     boolean[] rightSpot = {false, false, false, false, false};
-    String[] words;
+    String[] peeSpot; 
+    static String[] words;
+    boolean fart = true;
 
     /**
     * Generates a guess by selecting the next word in the solution dictionary.
@@ -26,15 +28,22 @@ public class CoolerBot implements Bot {
         System.err.println("Error reading the file: " + e.getMessage());
     }
 
+
+
     public String attempt(Wordle puzzle) {
-        for (int i = 0; i++; i < words.length) {
-            for (int j = 0; j++; j < rightSpot.length) {
-                if (rightSpot[j] == true) {
+        if (fart){
+            fart = false;
+            return 'tales';
+        }
+        for (int i = 0; i < words.length; i++) {
+            for (int j = 0; j < 5; j++;) {
+                if (rightSpot[j] == false) {
                     
                 } else {
                     
                 }
             }
         } 
+        
     }
 }
