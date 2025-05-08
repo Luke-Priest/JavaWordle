@@ -40,7 +40,7 @@ public class DingBot implements Bot {
         }
 
         // identify confirmed letters from previous guesses
-        char learned[] = {'?','?','?','?','?'};
+        char[] learned = {'?','?','?','?','?'};
         for (Attempt attempt : puzzle.getAttempts()) {
             String word = attempt.getWord();
             boolean[] correct = attempt.getCorrects();

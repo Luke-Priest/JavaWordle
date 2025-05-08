@@ -53,4 +53,28 @@ public class Attempt {
     public boolean[] getAlmosts() {
         return this.almosts;
     }
+
+    /**
+     * Retrieve a formatted string representation of the attempt.
+     * Results have letters colored green and yellow with ANSI color escape sequences
+     * to indicate correct and almost letters.
+     * 
+     * @return  formatted resulting string
+    */
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        char[] letters = this.word.toCharArray();
+        for (int i = 0; i < letters.length; i++) {
+            if (this.corrects[i]) {
+                result.append("\033[1;32m" + letters[i] + "\033[0;0m");
+            } else {
+                if (this.almosts[i]) {
+                    result.append("\033[1;33m" + letters[i] + "\033[0;0m");
+                } else {
+                    result.append(letters[i]);
+                }
+            }
+        }
+        return result.toString();
+    }
 }
