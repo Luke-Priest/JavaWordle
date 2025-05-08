@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+// import java.util.Hashtable;
 
 /**
  * A puzzle involving an unknown five-letter word.
@@ -115,13 +116,26 @@ public class Wordle {
         // determine the correct and close letters
         boolean[] corrects = {false, false, false, false, false};
         boolean[] almosts = {false, false, false, false, false};
-        for (int i = 0; i < candidates.length; i++) {
-            for (int j = 0; j < targets.length; j++) {
-                if (candidates[i] == targets[j]) {
-                    if (i == j) {
-                        corrects[i] = true;
-                    } else {
-                        almosts[i] = true;
+        for (int i = 0; i < targets.length; i++) {
+            if (targets[i] == candidates[i]) {
+                corrects[i] = true;
+                if (almosts[i]) {
+                    almosts[i] = false;
+                }
+            } else {
+                int found = 0;
+                int frequency = 0;
+                char letter = targets[i];
+                for (int j = 0; j < targets.length; j++) {
+                    if (targets[j] == letter) {
+                        frequency++;
+                    }
+                }
+                for (int k = 0; k < candidates.length; k++) {
+                    if (found == frequency) { break; }
+                    if ((k != i) && candidates[k] == letter) {
+                        almosts[k] = true;
+                        found++;
                     }
                 }
             }
