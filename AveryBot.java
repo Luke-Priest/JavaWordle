@@ -64,8 +64,8 @@ public class AveryBot implements Bot {
             }
             if (matches) {
                 // provides first guesses that improve the probability of guessing the word
-                if(this.count <= 1) {
-                    private String[] startingWords = {"crane", "slipt"}
+                if(this.count <= 3) {
+                    final String[] startingWords = {"", "crane", "slipt", "gumbo"};
                     results = startingWords[this.count];
                 }else{
                     results = candidate;
