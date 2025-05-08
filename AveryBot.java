@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * A bot that guesses based on previously correct letters.
  * 
- * @author Jon Roberts
+ * @author Jon Robertss
 */
 public class AveryBot implements Bot {
 
