@@ -17,7 +17,7 @@ public interface Bot {
     public String attempt(Wordle puzzle);
 
     /**
-     * Test select bot against a puzzle. 
+     * Test select bot against a puzzle
     */
     public static void main(String[] args) {
 
