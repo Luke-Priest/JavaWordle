@@ -21,14 +21,16 @@ public interface Bot {
     */
     public static void main(String[] args) {
 
-        // create a puzzle and player
+        // create a puzzle
         // Wordle puzzle = new Wordle("pixel");
         Wordle puzzle = new Wordle();
+
+        // create a player
         // Bot player = new DuhBot();
         // Bot player = new DizzyBot();
-        // Bot player = new DingBot();
+        //Bot player = new DingBot();
         Bot player = new AveryBot();
-        // Bot player = new CoolerBot();
+        // Bot player = new YourBotHere();
 
         // have bot attempt until solving the wordle
         do {
@@ -37,7 +39,7 @@ public interface Bot {
         
         // output the results for the bot
         for (Attempt attempt : puzzle.getAttempts()) {
-            System.out.println("guess: " + attempt.getWord());
+            System.out.println("guess: " + attempt.toString());
         }
         System.out.println("  It took " + puzzle.getAttempts().length + " tries, but you got it.");
     }
