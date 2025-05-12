@@ -53,7 +53,7 @@ public class LukeBot implements Bot {
         }
 
         // if it has no matches it just vomits out zebra - avery
-        return "zebra";
+        return "zonal";
     }
 
     private void updateKnowledge(Wordle puzzle) {
