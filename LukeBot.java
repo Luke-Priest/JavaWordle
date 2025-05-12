@@ -33,7 +33,7 @@ public class LukeBot implements Bot {
     public String attempt(Wordle puzzle) {
         updateKnowledge(puzzle);
 
-        // High-quality starting words
+        // Awesome Avery Starting word! (crane slipt gumbo is best combo so far)
         final String[] startingWords = {"crane", "slipt", "gumbo"};
         if (guessCount < startingWords.length) {
             String guess = startingWords[guessCount++];
