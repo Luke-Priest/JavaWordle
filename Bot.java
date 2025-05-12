@@ -29,6 +29,7 @@ public interface Bot {
         // Bot player = new DuhBot();
         // Bot player = new DizzyBot();
         //Bot player = new DingBot();
+        //Bot player = new LukeBot();
         Bot player = new AveryBot();
         // Bot player = new YourBotHere();
 
