@@ -6,8 +6,6 @@ import java.util.*;
 /**
  * A smarter Wordle bot
  * Avoids repeating guesses and uses logical deduction from past attempts.
- * 
- * Assumes Attempt provides: getWord(), getCorrects(), getAlmosts()
  */
 public class LukeBot implements Bot {
 
@@ -42,7 +40,7 @@ public class LukeBot implements Bot {
             return guess;
         }
 
-        // filters all the words based on what it knows
+        // filters all the words based on what it knows - luke
         for (Iterator<String> it = solutions.iterator(); it.hasNext(); ) {
             String candidate = it.next();
             if (matchesKnowledge(candidate)) {
@@ -77,21 +75,21 @@ public class LukeBot implements Bot {
     }
 
     private boolean matchesKnowledge(String word) {
-        // check for learned
+        // check for learned letters - luke
         for (int i = 0; i < 5; i++) {
             if (learned[i] != '?' && word.charAt(i) != learned[i]) {
                 return false;
             }
         }
 
-        // Must include all known present letters
+        // Must include all known present letters - luke
         for (char c : confirmedPresent) {
             if (!word.contains(String.valueOf(c))) {
                 return false;
             }
         }
 
-        // no absent allowed (unless they're also confirmed present)
+        // no absent allowed - luke
         for (char c : confirmedAbsent) {
             if (!confirmedPresent.contains(c) && word.contains(String.valueOf(c))) {
                 return false;
