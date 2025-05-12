@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * A bot that guesses based on previously correct letters.
  * 
- * @author Jon Roberts
+ * @author Jon Robertss
 */
 public class AveryBot implements Bot {
 
@@ -65,9 +65,7 @@ public class AveryBot implements Bot {
             if (matches) {
                 // provides first guesses that improve the probability of guessing the word
                 if(this.count <= 3) {
-                    //final String[] startingWords = {"", "tails", "round", "guide"};
-                    //final String[] startingWords = {"", "juice", "voast", "bliny"};
-                    //final String[] startingWords = {"", "salet", "crony", "fetch"};
+
                     final String[] startingWords = {"", "crane", "slipt", "gumbo"};
                     results = startingWords[this.count];
                 }else{

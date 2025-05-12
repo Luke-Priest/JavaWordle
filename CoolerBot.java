@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class CoolerBot implements Bot {
 
-    // variables and stuff here
+    // variables and stuff heres
     String[] wrong;
     String[] right;
     boolean[] rightSpot = {false, false, false, false, false};
